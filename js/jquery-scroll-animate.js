@@ -70,6 +70,8 @@
       });
     }
   }).resize();
+
+  // lock user zoom in or out
   $.fn.fixedZoom = function() {
     if (_object === null ) {
       _object = this;
