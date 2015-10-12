@@ -1,0 +1,46 @@
+#full-screen-background-image {
+  z-index: -999;
+  min-height: 100%;
+  min-width: 1347px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#wrapper {
+  position: relative;
+  width: 800px;
+  min-height: 400px;
+  margin: 100px auto;
+  color: #333;
+}
+
+.navbar {
+  position: fixed;
+  /* transition: top 400ms ease-out; */
+  height: 56px;
+  background: #ccc;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  -webkit-transition: all .5s;
+          transition: all .5s;
+}
+.navbar.hide {
+  -webkit-transform: translateY(-60px);
+  -ms-transform: translateY(-60px);
+  transform: translateY(-60px);
+}
+
+.subnav li {
+  display: inline-block;
+  padding: 0 8px;
+
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+}
