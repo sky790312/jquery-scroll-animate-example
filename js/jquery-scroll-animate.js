@@ -47,11 +47,11 @@
       .on('scroll', function (e) {
         if (!scrolling)
           top = container.scrollTop();
+
+          headerControll($(this));
       })
 
   }
-
-
 
   var _object = null;
   $(window).resize(function() {
@@ -80,4 +80,30 @@
     }
     return this;
   };
+
+
+
+  // add header show hide function => 只要往上滾的時候就show
+  var $nav = $('#navbar');
+  var lastPos = 0;
+  var nav_hide = false;
+  function headerControll($this) {
+
+    var currPos = $this.scrollTop();
+    var delta = currPos - lastPos;
+    lastPos = currPos;
+    console.log(delta);
+    //如果往下滑 而且還沒有隱藏BAR就添加CALSS
+    if ( delta > 0) {
+      if(!nav_hide){
+        $nav.addClass('hide');
+        nav_hide = true;
+      }
+    } else {
+      if(nav_hide){
+        $nav.removeClass('hide');
+        nav_hide = false;
+      }
+    }
+  }
 })(jQuery);

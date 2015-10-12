@@ -18,3 +18,35 @@
   margin: 100px auto;
   color: #333;
 }
+
+/* line 20, ../sass/jquery-scroll-animate.scss */
+.navbar {
+  position: fixed;
+  /* transition: top 400ms ease-out; */
+  height: 56px;
+  background: #ccc;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+/* line 32, ../sass/jquery-scroll-animate.scss */
+.navbar.hide {
+  -webkit-transform: translateY(-60px);
+  -ms-transform: translateY(-60px);
+  transform: translateY(-60px);
+}
+
+/* line 38, ../sass/jquery-scroll-animate.scss */
+.subnav li {
+  display: inline-block;
+  padding: 0 8px;
+}
+/* line 42, ../sass/jquery-scroll-animate.scss */
+.subnav li a {
+  color: #333;
+  text-decoration: none;
+}
